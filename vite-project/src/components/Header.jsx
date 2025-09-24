@@ -1,3 +1,4 @@
+import { Link } from "react-router";
 import ThemeToggle from "./ThemeToggle.jsx";
 function Header({ darkMode, setDarkMode }) {
   return (
@@ -7,11 +8,10 @@ function Header({ darkMode, setDarkMode }) {
       </div>
 
       <nav className="navbar">
-        <a  href="Home.jsx">Home</a>
-        <a href="#">Products</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-      </nav>
+  <Link to="/">Home</Link>
+  <Link to="/about">About</Link>
+  <Link to="/contact">Contact</Link>
+</nav>
 
       <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
     </header>

@@ -1,4 +1,3 @@
-/* Root variables for luxury theme */
 :root {
   --primary-bg: #f8f5f0;
   --secondary-bg: #ffffff; 
@@ -7,10 +6,11 @@
   --accent-secondary: #8c8c8c;
   --highlight-color: #d4af37; 
   --hover-color: #b8926a; 
-  --border-color: #e0d8cf; 
+  --border-color: #e0cfde; 
   --shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   --gradient-bg: linear-gradient(135deg, #2c2c2c, #c5a880); 
   --transition: all 0.3s ease;
+  
 }
 
 .dark {
@@ -64,21 +64,37 @@ body {
 }
 
 .toggle-btn {
+  background: var(--gradient-bg);     
   color: #fff;
   border: none;
-  padding: 0.75rem;
-  width: 100%;
-  border-radius: 12px;
+  padding: 0.75rem 1.5rem;             
+  border-radius: 12px;               
   cursor: pointer;
-  font-size: 1.1rem;
+  font-size: 0.5rem;
   font-weight: 600;
   transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow);           
 }
 
 .toggle-btn:hover {
-  background-color: var(--hover-color);
   transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15); 
+  background-color: var(--hover-color);
+  border: 1px solid;
+  border-color: #807e23;
 }
+
+.toggle-btn.open {
+  transform: rotate(20deg);  
+}
+
+.toggle-btn.close {
+  transform: rotate(0deg);
+}
+
 
 .sidebar-content {
   margin-top: 1.5rem;
@@ -279,22 +295,6 @@ body {
   font-weight: 600;
 }
 
-.buy-btn {
-  background: var(--gradient-bg);
-  color: #fff;
-  border: none;
-  padding: 0.75rem 1.5rem;
-  border-radius: 12px;
-  cursor: pointer;
-  font-size: 1.1rem;
-  font-weight: 600;
-  transition: var(--transition);
-}
-
-.buy-btn:hover {
-  transform: scale(1.05);
-  box-shadow: var(--shadow);
-}
 
 .footer {
   text-align: center;
@@ -395,4 +395,93 @@ body {
     padding: 0.5rem 1rem;
     font-size: 1rem;
   }
+}
+/* About Page */
+.about-page {
+  background-color: var(--secondary-bg);
+  color: var(--text-color);
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  box-shadow: var(--shadow);
+  margin: 2rem auto;
+  max-width: 900px;
+  transition: var(--transition);
+}
+.about-page h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--accent-color); }
+.about-page p { font-size: 1.2rem; line-height: 1.8; margin-bottom: 1.5rem; }
+.about-page button {
+  padding: 0.75rem 2rem; font-size: 1.1rem; background-color: var(--accent-color);
+  color: #fff; border: none; border-radius: 8px; cursor: pointer; transition: var(--transition);
+}
+.about-page button:hover { background-color: var(--hover-color); transform: scale(1.05); box-shadow: var(--shadow); }
+
+@media (max-width: 768px) {
+  .about-page { padding: 2rem 1rem; }
+  .about-page h1 { font-size: 2rem; }
+  .about-page p { font-size: 1rem; }
+}
+
+/* Contact Page */
+.contact-page {
+  background-color: var(--secondary-bg); color: var(--text-color);
+  padding: 3rem 2rem; border-radius: 12px; box-shadow: var(--shadow);
+  max-width: 800px; margin: 2rem auto; transition: var(--transition); text-align: center;
+}
+.contact-page h1 { font-size: 2.5rem; margin-bottom: 0.5rem; color: var(--accent-color); }
+.contact-page p { font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.85; }
+
+.contact-form { display: flex; flex-direction: column; gap: 1.2rem; }
+.contact-form label { display: flex; flex-direction: column; font-weight: 600; text-align: left; }
+.contact-form input, .contact-form textarea {
+  padding: 0.75rem 1rem; margin-top: 0.5rem; border-radius: 8px; border: 1px solid var(--border-color);
+  background-color: var(--primary-bg); color: var(--text-color); transition: var(--transition);
+}
+.contact-form input:focus, .contact-form textarea:focus {
+  outline: none; border-color: var(--accent-color); box-shadow: 0 0 8px rgba(197, 168, 128, 0.5);
+}
+.contact-form textarea { min-height: 120px; resize: vertical; }
+
+@media (max-width: 768px) {
+  .contact-page { padding: 2rem 1rem; }
+  .contact-page h1 { font-size: 2rem; }
+  .contact-page p { font-size: 1rem; }
+}
+
+/* Submit Page */
+.submit-page {
+  background-color: var(--secondary-bg); color: var(--text-color);
+  padding: 3rem 2rem; border-radius: 12px; box-shadow: var(--shadow);
+  max-width: 700px; margin: 3rem auto; text-align: center; transition: var(--transition);
+}
+.submit-page h1 { font-size: 2.5rem; margin-bottom: 1rem; color: var(--accent-color); }
+.submit-page p { font-size: 1.2rem; margin-bottom: 2rem; opacity: 0.85; }
+
+@media (max-width: 768px) {
+  .submit-page { padding: 2rem 1rem; }
+  .submit-page h1 { font-size: 2rem; }
+  .submit-page p { font-size: 1rem; }
+}
+
+/* Category Page */
+.category-page {
+  background-color: var(--secondary-bg); color: var(--text-color);
+  padding: 2.5rem; border-radius: 12px; box-shadow: var(--shadow);
+  margin: 2rem auto; width: 1250px; transition: var(--transition); text-align: center;
+  animation: fadeIn 0.6s ease;
+}
+.category-page h2 { font-size: 2.2rem; margin-bottom: 1.5rem; color: var(--accent-color); }
+.category-page .product-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem; margin-top: 2rem;
+}
+
+/* Buttons (merged styles) */
+.add-to-cart, .buy-btn, .back-home-btn {
+  background: var(--gradient-bg); color: #fff; border: none;
+  padding: 0.75rem 1.5rem; border-radius: 12px; cursor: pointer;
+  font-size: 0.7rem; font-weight: 600; transition: var(--transition);
+  margin-right: 10px;
+}
+.add-to-cart:hover, .buy-btn:hover, .back-home-btn:hover {
+  transform: scale(1.05); box-shadow: var(--shadow);
 }

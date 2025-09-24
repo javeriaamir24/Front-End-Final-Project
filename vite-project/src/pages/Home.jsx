@@ -1,13 +1,10 @@
-import { useState } from "react";   
-import Sidebar from "./Sidebar.jsx"; 
-import Header from "./Header.jsx";
-import Display from "./Display.jsx";
-import Footer from "./Footer.jsx";
+import Sidebar from "../components/Sidebar.jsx"; 
+import Header from "../components/Header.jsx";
+import Display from "../components/Display.jsx";
+import Footer from "../components/Footer.jsx";
 import "../App.css";
 
-function Home() {
-  const [darkMode, setDarkMode] = useState(false);
-
+function Home({ darkMode, setDarkMode }) {
   return (
     <div className={`home ${darkMode ? "dark" : "light"}`}>
       <Sidebar />
