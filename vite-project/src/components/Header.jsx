@@ -5,7 +5,7 @@ function Header({ darkMode, setDarkMode }) {
     <header className="header">
       <div className="logo">
         <h1>Watchify</h1>
-        <h2>   by Javeria Aamir</h2>
+        <h2>by Javeria Aamir</h2>
       </div>
 
       <nav className="navbar">
@@ -13,8 +13,8 @@ function Header({ darkMode, setDarkMode }) {
   <Link to="/about">About</Link>
   <Link to="/contact">Contact</Link>
 </nav>
-
       <ThemeToggle darkMode={darkMode} setDarkMode={setDarkMode} />
+      
     </header>
   );
 }

@@ -2,7 +2,7 @@ import { useParams, Link } from "react-router";
 import products from "../data/products.js";
 import ProductCard from "../components/ProductCard.jsx";
 
-function Category({ darkMode }) {
+function Category({ darkMode, addToCart }) {
   const { category } = useParams();
 
   const filteredProducts = products.filter(
@@ -21,6 +21,7 @@ function Category({ darkMode }) {
               name={prod.name}
               price={prod.price}
               image={prod.image}
+              addToCart={addToCart}
             />
           ))
         ) : (

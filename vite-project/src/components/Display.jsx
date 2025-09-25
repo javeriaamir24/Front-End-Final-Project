@@ -1,7 +1,7 @@
 import products from "../data/products.js";
 import ProductCard from "../components/ProductCard.jsx";
 
-function Display() {
+function Display( {addToCart}) {
   return (
     <div className="product-grid">
       {products.map((prod, index) => (
@@ -10,6 +10,7 @@ function Display() {
           name={prod.name}
           price={prod.price}
           image={prod.image}
+          addToCart={addToCart}
         />
       ))}
     </div>

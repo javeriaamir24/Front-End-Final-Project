@@ -1,12 +1,11 @@
-function Footer(){
-    return(
-        <footer className = "footer">
-            <div>
-                <p>connect with us on socials</p>
-                <a href = "#"> watchify/instagram.com</a>
-            </div>
-            <p>2025 ALL Rights Reserved </p>
-        </footer>
-    );
+function Footer() {
+  return (
+    <footer className="footer">
+      <p>Connect with us on Socials</p>
+      <a href="#">watchify/instagram.com</a> 
+      <p>© 2025 All Rights Reserved</p>
+    </footer>
+  );
 }
+
 export default Footer;

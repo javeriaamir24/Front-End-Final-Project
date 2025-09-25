@@ -4,7 +4,7 @@ import Display from "../components/Display.jsx";
 import Footer from "../components/Footer.jsx";
 import "../App.css";
 
-function Home({ darkMode, setDarkMode }) {
+function Home({ darkMode, setDarkMode,addToCart }) {
   return (
     <div className={`home ${darkMode ? "dark" : "light"}`}>
       <Sidebar />
@@ -17,7 +17,7 @@ function Home({ darkMode, setDarkMode }) {
           <p>Style at your own wrist ;)</p>
           <h3>Featured Watches</h3>
 
-          <Display />
+          <Display addToCart={addToCart} />
 
           <Footer />
         </main>
