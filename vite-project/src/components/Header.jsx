@@ -5,6 +5,7 @@ function Header({ darkMode, setDarkMode }) {
     <header className="header">
       <div className="logo">
         <h1>Watchify</h1>
+        <h2>   by Javeria Aamir</h2>
       </div>
 
       <nav className="navbar">

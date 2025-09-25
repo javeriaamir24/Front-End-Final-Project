@@ -164,6 +164,16 @@ body {
   -webkit-text-fill-color: transparent;
 }
 
+.logo h2{
+  font-size: 1rem;
+  font-style: italic;
+  font-weight: 400;
+  background: var(--gradient-bg);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-left: 18%;
+}
 .navbar {
   display: flex;
   gap: 2rem;
@@ -396,7 +406,6 @@ body {
     font-size: 1rem;
   }
 }
-/* About Page */
 .about-page {
   background-color: var(--secondary-bg);
   color: var(--text-color);
@@ -421,7 +430,6 @@ body {
   .about-page p { font-size: 1rem; }
 }
 
-/* Contact Page */
 .contact-page {
   background-color: var(--secondary-bg); color: var(--text-color);
   padding: 3rem 2rem; border-radius: 12px; box-shadow: var(--shadow);
@@ -447,7 +455,6 @@ body {
   .contact-page p { font-size: 1rem; }
 }
 
-/* Submit Page */
 .submit-page {
   background-color: var(--secondary-bg); color: var(--text-color);
   padding: 3rem 2rem; border-radius: 12px; box-shadow: var(--shadow);
@@ -462,7 +469,6 @@ body {
   .submit-page p { font-size: 1rem; }
 }
 
-/* Category Page */
 .category-page {
   background-color: var(--secondary-bg); color: var(--text-color);
   padding: 2.5rem; border-radius: 12px; box-shadow: var(--shadow);
@@ -475,7 +481,6 @@ body {
   gap: 2rem; margin-top: 2rem;
 }
 
-/* Buttons (merged styles) */
 .add-to-cart, .buy-btn, .back-home-btn {
   background: var(--gradient-bg); color: #fff; border: none;
   padding: 0.75rem 1.5rem; border-radius: 12px; cursor: pointer;
