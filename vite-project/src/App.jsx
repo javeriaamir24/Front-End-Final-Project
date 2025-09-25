@@ -18,7 +18,7 @@ function App() {
 
     setNotification(`${product.name} added to cart `);
 
-    setTimeout(() => setNotification(""), 500);
+    setTimeout(() => setNotification(""), 1500);
   };
 
   return (
